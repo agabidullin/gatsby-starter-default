@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+
 const links = [
   {
     text: "Tutorial",
@@ -46,26 +47,7 @@ const samplePageLinks = [
   { text: "Deferred Static Generation", url: "using-dsg" },
 ]
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+const moreLinks = []
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
@@ -73,7 +55,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <div className={styles.textCenter}>
-      <StaticImage
+      {/* <StaticImage
         src="../images/example.png"
         loading="eager"
         width={64}
@@ -81,12 +63,13 @@ const IndexPage = () => (
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
+      /> */}
+      <h1>Смарт Бизнес</h1>
+      
+      <div>Цифровая трансформация бизнеса</div>
+      <div>Мы делаем бизнес умным с помощью цифры</div>
+      {/* <p className={styles.intro}>
+        {" "}
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
@@ -94,10 +77,9 @@ const IndexPage = () => (
           </React.Fragment>
         ))}
         <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+      </p> */}
     </div>
-    <ul className={styles.list}>
+    {/* <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
           <a
@@ -115,7 +97,7 @@ const IndexPage = () => (
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
-    ))}
+    ))} */}
   </Layout>
 )
 
